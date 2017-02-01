@@ -1,0 +1,32 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+        title Victor Loux &mdash; interaction designer
+        link(rel='stylesheet', href='/css/main.css')
+        script(src='//use.typekit.net/ejs7lhs.js')
+        script.
+            // check for safari and if yes, add a 'safari' class for small caps
+            if(!!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/)){
+                document.addEventListener("DOMContentLoaded", function () {
+                    document.getElementsByTagName("body")[0].className += "safari"
+                }, false);
+            }
+            try{Typekit.load();}catch(e){}
+    body
+        .container
+
+            include ./pages/projects.jade
+            include ./pages/intro.jade
+            include ./pages/work.jade
+            include ./pages/cv.jade
+
+        script(src='/js/smoothscroll.js')
+        script.
+            smoothScroll.init({
+                speed: 650,
+                easing: 'easeOutQuint', // Easing pattern to use
+                offset: 50, // Integer. How far to offset the scrolling anchor location in pixels
+            });

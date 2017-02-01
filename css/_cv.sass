@@ -1,0 +1,121 @@
+.cv
+	header
+		+span-columns($grid-columns)
+		+row
+		margin-bottom: 1em
+
+
+	h3
+		+left-side
+		height: 1.1em
+		margin-top: 0
+		margin-bottom: 0
+
+		// background: tan
+		font-weight: 800
+
+		text-align: right
+		font-size: 1.1em
+		line-height: 1.1
+		+real-small-caps
+
+		+media($mobile)
+			font-size: 0.83em
+			+shift(1 of 8)
+			+span-columns(2 of 8)
+			text-align: left
+
+
+	.line
+		+right-side
+		height: 0.55em
+		margin-top: 0
+		margin-bottom: 0
+
+
+		border-style: solid
+		border-width: 0 0 2px 0
+		border-color: mix($background, $text-alt, 50%)
+
+		+media($mobile)
+			+span-columns(5 of 8)
+
+			&.low
+				height: 1.34em
+
+	section
+		margin-bottom: 4.2em
+		+row
+
+		+media($mobile)
+			margin-bottom: 3em
+
+	article
+		margin: 0 0 1.8em 0
+		+span-columns($grid-columns)
+		+row
+		+fill-parent
+
+		+media($mobile)
+			margin: 0 0 1.3em 0
+
+	aside
+		+asides
+
+
+	.definition
+		margin: 0
+		+right-side
+
+		+media($mobile)
+			+shift($mobile-left-side-width of $mobile-grid-columns)
+
+	aside, h4, p
+		margin-bottom: 0
+		margin-top: 0
+
+	h4, .emphasis
+		// text-transform: uppercase
+		// text-transform: lowercase
+		// text-transform: lowercase
+		// font-variant: small-caps
+
+		font-weight: 800
+		color: black
+		font-size: 1.2em
+		margin-top: -0.2em // even the baseline since h4s are 1.2em
+
+		+real-small-caps
+
+	.emphasis
+		display: inline-block
+
+	h4 em
+		font-style: normal
+		font-size: 0.84em
+
+	h4 span
+		color: darken($text-darker, 5%)
+		font-size: .8em
+		margin-left: 0.3em
+
+	&:hover p
+
+	p
+		+right-side-inner-limited
+		color: $tint-70
+
+		+media($mobile)
+			font-size: 0.84em
+
+	p.details
+		width: 65%
+		color: mix($tint-70, $aside-colour, 40%)
+		font-size: 0.9em
+
+.limexp, p.limexp
+	color: $tint-fade
+
+p.limexp
+	margin-top: 0.3em
+	+real-small-caps

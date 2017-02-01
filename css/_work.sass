@@ -1,0 +1,178 @@
+
+.work
+
+    aside
+        +asides
+        font-size: 1.16em
+
+        .definition
+            margin-bottom: 0
+
+            +media($mobile)
+                display: block
+                margin-left: 0
+                margin-bottom: 1em
+
+                a
+                    margin-left: 0 !important
+                    margin-right: 0.4em
+
+
+    .images
+        +right-side
+        margin: 0
+
+        +media($mobile)
+            +right-side-only
+
+    .definition-etc
+        +right-side
+
+        +media($mobile)
+            +right-side-only
+
+        p
+            margin: 0.2em 0 4em
+            +right-side-inner-limited
+
+    .definition
+        +right-side-only
+        margin-bottom: 7.6em
+
+        +media($mobile)
+            +right-side-only
+            margin-bottom: 3.3em
+
+        p
+            +right-side-inner-limited
+
+            margin: 0
+            color: $text-darker
+
+            +serif
+            font-size: 1.2em
+            // font-style: italic
+
+
+        p.additional
+            margin-top: 0.4em
+            font-size: 1em
+            color: mix($background, $aside-colour, 40%)
+            +sans-serif
+            +real-small-caps
+            // font-weight: bold
+            
+            a:link, a:visited
+                color: mix($background, $aside-colour, 25%)
+
+        .note
+            font-style: normal
+
+        & > a:link, & > a:visited
+            display: inline-block
+            margin-left: 1em
+            margin-top: 0.6em
+            padding: 0.3em 0.5em
+            background: mix($background, $text-darker, 80%)
+            color: $text-darker
+
+            font-size: 0.8em
+
+            border-radius: 4px
+
+            +sans-serif
+            font-weight: bold
+
+            &:hover
+                background: mix($background, $text-darker, 70%)
+                // text-decoration: none
+
+            &:after
+                text-decoration: none
+                display: inline-block
+                margin-left: 0.3em
+                margin-top: 0.1em
+                content: " \002192"
+
+
+
+
+    $image-height: 260px
+    .image
+        +span-columns(2 of $right-side-width)
+        height: $image-height
+        margin-bottom: 0.8em
+        overflow: hidden
+        // dimensions: 260x170, large 360x170
+        margin-bottom: flex-gutter()
+        text-align: center
+
+        background-size: cover
+
+        video
+            // width: 100%
+            object-fit: cover
+            // width: 360px
+            margin-top: -10%
+            // width: $column * 2 + $gutter
+            +fill-parent
+
+        background-color: darken($background, 20%)
+
+        // $grid-item-colors: #3581a5, #5fbebe, #98c79a, #a7a891, #bdcc97, #979ea0
+
+        // @for $i from 1 through 4
+        //     // assign colors from $grid-item-colors list
+        //     &:nth-child(#{$i})
+        //         $background-from-list: nth($grid-item-colors, $i)
+        //         background-color: $background-from-list
+
+        +media($tablet)
+            +span-columns($tablet-right-side-width of $tablet-right-side-width)
+
+        +media($mobile)
+            +span-columns($mobile-right-side-width - 1 of $mobile-right-side-width)
+
+        &.wide
+            +span-columns(3 of $right-side-width)
+
+            +media($tablet)
+                +span-columns($tablet-right-side-width of $tablet-right-side-width)
+
+            +media($mobile)
+                +span-columns($mobile-right-side-width - 1 of $mobile-right-side-width)
+
+            // max-width: 360px !important
+
+        &.verywide
+            +span-columns(4 of $right-side-width)
+
+            +media($tablet)
+                +span-columns($tablet-right-side-width of $tablet-right-side-width)
+
+            +media($mobile)
+                +span-columns($mobile-right-side-width - 1 of $mobile-right-side-width)
+
+            // max-width: 460px !important
+
+$all-project-images: ("cuppa-1", png), ("cuppa-2", png), ("get-something-back-dial", jpg), ("get-something-back-phone", jpg), ("get-something-back-top", jpg), ("get-something-back-wall", jpg), ("pedete-day", jpg), ("pedete-screen", png), ("pedete", gif), ("reminiscer-1", jpg), ("reminiscer-2", jpg), ("reminiscer-3", jpg), ("socialdigital-booklet", jpg), ("socialdigital-booklet2", jpg), ("socialdigital-space", jpg), ("static-flyers", jpg), ("static-set", jpg), ("static-vj", jpg), ("tig-1", jpg), ("tig-2", jpg), ("tig-3", png), ("daw-1", jpg), ("daw-2", png), ("daw-3", png), ("dada-1", png), ("dada-2", jpg), ("dada-3", png), ("tapepm-1", png), ("tapepm-2", jpg), ("tapepm-3", png)
+
+@each $filename, $extension in $all-project-images
+    .project-#{$filename}
+        background-image: url('/images/#{$filename}_desktop.#{$extension}')
+
+        +hidpi(1.5)
+            background-image: url('/images/#{$filename}_desktop@2x.#{$extension}')
+
+        +media($mobile)
+            background-image: url('/images/#{$filename}_mobile.#{$extension}')
+
+            +hidpi(1.5)
+                background-image: url('/images/#{$filename}_mobile@2x.#{$extension}')
+
+.project-socialdigital-space, .project-tapepm-2
+    background-position: 50% 0
+
++media($tablet)
+    .project-reminiscer-3
+        background-position: 0 30%

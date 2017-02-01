@@ -1,0 +1,71 @@
+/////////////
+// Colours //
+/////////////
+
+// http://www.colourlovers.com/palette/57650/She_Sells_Seashells.
+$base: #9FC9D6
+$background: lighten($base, 5%)
+$text: black
+$text-alt: darken($base, 15%)
+$text-darker: mix($text-alt, $text, 70%)
+
+$accent: #FFFEFA
+$aside-colour: $text-darker
+
+$tint-50: mix($text, white, 50%)
+$tint-70: mix($text, white, 70%)
+
+$tint-fade: mix($text, $background, 36%)
+
+////////////////
+// Typography //
+////////////////
+
+=sans-serif
+	font-family: "soleil", sans-serif
+
+=serif
+	font-family: "alegreya", serif
+
+=sans-serif-black
+	font-family: "soleil", sans-serif
+	font-weight: 800
+
+=oldstyle-nums
+	font-variant-numeric: oldstyle-nums
+	-moz-font-feature-settings: "onum"
+	-ms-font-feature-settings: "onum"
+	-webkit-font-feature-settings: "onum"
+	font-feature-settings: "onum"
+
+=real-small-caps
+	text-transform: lowercase
+	font-variant-caps: small-caps
+	-moz-font-feature-settings: "smcp"
+	-ms-font-feature-settings: "smcp"
+	-webkit-font-feature-settings: "smcp"
+	font-feature-settings: "smcp"
+
+	@at-root .safari &
+		text-transform: uppercase
+
+// General layout
+
+=asides($margin-top: 0.2em)
+	+left-side
+	margin-top: $margin-top
+	+sans-serif
+	text-transform: lowercase
+	text-align: right
+	color: $aside-colour
+	font-weight: bold
+	+oldstyle-nums
+
+	+media($mobile)
+		+right-side-only
+		text-align: left
+		font-size: 0.9em
+
+	.details
+		color: mix($background, $aside-colour, 50%)
+		font-size: 0.8em

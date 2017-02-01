@@ -1,0 +1,76 @@
+@import "bourbon/bourbon"
+@import "grid-settings"
+@import "neat/neat"
+@import general
+
+@import normalize.css
+
+body
+	padding: 0
+	background-color: $background
+	background: linear-gradient(darken($background, 4%) 0, $background 8%)
+	color: $text
+	margin: 0
+
+	@if ($visual-grid == false)
+		// border-left: 1.2em solid mix($background, $accent, 60%)
+
+	+sans-serif
+
+	+transition(border-width 0.4s linear)
+
+	+media($large-screen)
+		font-size: 1.2em
+		border-left-width: 1.5em
+
+	+media($tablet)
+		border-left-width: 0.9em
+
+	+media($mobile)
+		border-left-width: 0.6em
+
+
+.container
+	@if ($visual-grid == true)
+		+outer-container
+	@else
+		+outer-container-left
+
+	+media($large-screen)
+		+outer-container-left($max-width * 1.2)
+
+
+// @todo: remove unnecessary fonts on Typekit
+h1, h2
+	margin: 0.8em 0 0.6em 0
+	+right-side-only
+
+	color: $accent
+	text-shadow: 0 3px 4px mix($background, darken($accent, 80%), 80%)
+
+	font-size: 3.2em
+	line-height: 1.1
+	+sans-serif-black
+	+real-small-caps
+
+	+media($mobile and $tablet)
+		font-size: 2.6em
+
+a
+	// +transition(color 0.2s)
+	color: mix($text-alt, $text, 50%)
+
+	&:hover
+		color: black
+
+abbr[title]
+	cursor: help
+	border-bottom: none
+	+transition(color 0.4s)
+
+	&:hover
+		color: darken($background, 50%)
+
+@import intro
+@import work
+@import cv

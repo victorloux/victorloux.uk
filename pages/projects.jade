@@ -1,0 +1,238 @@
+- var pieces = [];
+
+mixin json()
+  - var oldbuf = buf; buf = [];
+  block
+  - pieces = JSON.parse(buf.join(''));
+  - buf = oldbuf;
+
++json().
+    [
+        {
+            "name": "Reminiscer",
+            "year": "honours project<br>product<br>2015",
+            "definition": "Online social networks are progressively replacing traditional photo albums and diaries as the central places that hold our life stories. Despite their convenience, they are often fragile and short-lived, and we cannot expect them to store these important memories for us forever. Reminiscer is a <strong>digital time capsule</strong> that allows people to back up their content from social networks, preserve them over several decades, and let us <strong>look back on our digital life</strong> in an organised way.",
+
+            "photos": [
+                {
+                    "filename": "reminiscer-1",
+                    "size": "wide"
+                },
+                {
+                    "filename": "reminiscer-2",
+                    "size": "wide"
+                },
+                {
+                    "filename": "reminiscer-3",
+                    "size": ""
+                }
+            ],
+            "links": {
+                "concept video": "http://youtu.be/WmeEcvTSnXI",
+                "Project booklet": "https://www.scribd.com/doc/298425622/Reminiscer-Process-Booklet",
+                "Dissertation": "https://www.scribd.com/doc/253276496/"
+            }
+        },
+
+        {
+            "name": "tape.pm",
+            "year": "installation<br>2016",
+            "definition": "tape.pm is an interactive <strong>installation accompanying innovative musical instruments</strong>. It encourages experimentation and exploration by offering a way to record improvisations on the instrument <strong>in hindsight</strong>, providing the players with a physical token that can be reused and shared later on. It is an exploration of playful and <strong>purposefully ambiguous</strong> design to trigger curiosity and multiple interpretations with the players.",
+            "additional": "Exhibited as part of Sónar+D 2016 alongside the <a href=\"http://collidoscope.io\">Collidoscope</a>, and Intersections 2016 with the <a href=\"http://music.ece.drexel.edu/research/mrp\">Magnetic Resonator Piano</a>.",
+
+            "photos": [
+                {
+                    "filename": "tapepm-1",
+                    "size": "wide"
+                },
+                {
+                    "filename": "tapepm-2",
+                    "size": ""
+                },
+                {
+                    "filename": "tapepm-3",
+                    "size": "wide"
+                }
+            ],
+            "links": {
+                "open source": "https://github.com/victorloux/tape.pm"
+            }
+        },
+
+        {
+            "name": "Data Audio Workstation",
+            "year": "web app<br>2015",
+            "definition": "Data sonification is the <strong>acoustic equivalent of data visualisation</strong>: it maps differences in the values of a dataset to audible changes in pitch, or use of different chords or velocity. It has a variety of applications, such as making <strong>visualisations accessible to visually impaired people</strong>, airing them on radio or podcasts, or simply to create interesting musical pieces; but sadly, the majority of existing tools to convert datasets to MIDI are too complex for musicians, journalists or designers. DAW is a <strong>data-based sequencer and tracker</strong> implemented in an easy, more accessible web-based editor, allowing non-technical people to <strong>experiment with data sonification</strong>.",
+            "additional": "This demo is a proof of concept and some datasets might not work as expected.",
+
+            "photos": [
+                {
+                    "filename": "daw-2",
+                    "size": "wide"
+                },
+                {
+                    "filename": "daw-1",
+                    "size": "wide"
+                },
+                {
+                    "filename": "daw-3",
+                    "size": ""
+                }
+            ],
+            "links": {
+                "demo": "http://victorloux.uk/etc/DAW/",
+                "open source": "https://github.com/victorloux/data-audio-workstation"
+            }
+        },
+
+        {
+            "name": "A Cuppa Tunes",
+            "year": "web app<br>2014",
+            "definition": "A Cuppa Tunes is an <strong>eclectic playlist of musical discoveries</strong>. I started running it in 2012 as a simple Facebook page, but as the number of songs shared expanded to the thousands I decided to create a small web app that archives all posts from Facebook, provides sorting by musical genre, and provides automatic, continuous playback from the different sources.",
+            "photos": [
+                {
+                    "filename": "cuppa-1",
+                    "size": "verywide"
+                },
+                {
+                    "filename": "cuppa-2",
+                    "size": "verywide"
+                }
+            ],
+            "links": {
+                "acuppatun.es": "http://acuppatun.es"
+            }
+        },
+
+        {
+            "name": "From Dada to Java",
+            "year": "documentary<br>2016",
+            "definition": "A short <strong>documentary on digital poetry and Twitter bots</strong>, featuring interviews with Nick Montfort, Darius Kazemi, Stephen McGregor, Paul Kneale, George Buckenham and Sandy Baldwin.",
+            "additional": "Made in collaboration with Betül Aksu, Sophie Skach and Zhou Tang",
+
+            "photos": [
+                {
+                    "filename": "dada-1",
+                    "size": "wide"
+                },
+                {
+                    "filename": "dada-2",
+                    "size": "wide"
+                },
+                {
+                    "filename": "dada-3",
+                    "size": ""
+                }
+            ],
+            "links": {
+                "watch the film": "https://vimeo.com/164973724"
+            }
+        },
+
+        {
+            "name": "Tig!",
+            "year": "app<br>2014",
+            "definition": "Initiated from a concept built in 48 hours at the <a href=\"http://planet.globalservicejam.org/\">Dundee Service Jam</a>, Tig! was an experiment for an augmented reality game which encouraged students and <strong>grown-ups to play an enhanced version of Hide and Seek in urban environments</strong>, using geolocation and digital additions taken from traditional videogames (such as “power-ups”, teams, Capture the Flag-like scenarios, etc.) It is meant to be used as a fun pastime to ultimately break up long study and work sessions, <strong>relieve stress</strong> and improve the users’ concentration and productivity.",
+            "additional": "Made in collaboration with Alison Rome",
+
+            "photos": [
+                {
+                    "filename": "tig-3",
+                    "size": ""
+                },
+                {
+                    "filename": "tig-2",
+                    "size": "wide"
+                },
+                {
+                    "filename": "tig-1",
+                    "size": "wide"
+                }
+            ]
+
+        },
+        {
+            "name": "Social Digital<br>Degree Show<br>+ STATIC",
+            "year": "graphic design<br>2015",
+            "definition": "For the <strong>final year exhibitions of Social Digital</strong>, our grouping of the Digital Interaction Design and Product Design courses at DJCAD, I designed the visual identity and matching website, booklets, projects boards and wall decorations. I also created the identity for STATIC, our fundraising night, and VJed there with <strong>custom graphics and animations</strong> matching that identity.",
+            "photos": [
+                {
+                    "filename": "socialdigital-space",
+                    "size": ""
+                },
+                {
+                    "filename": "socialdigital-booklet2",
+                    "_filename": "socialdigital-space",
+                    "size": "wide"
+                },
+                {
+                    "filename": "static-vj",
+                    "size": "wide"
+                }
+            ],
+            "_links": {
+                "website": "http://socialdigital.dundee.ac.uk/archives/2015/"
+            }
+        },
+
+        {
+            "name": "Pe&middot;De&middot;Te box",
+            "year": "installation<br>2014",
+            "definition": "At the beginning of my honours year, to provoke conversations with people from outwith the course, we were asked to creatively make boxes representing different aspects of our initial ideas. Using a webcam and TV screen, I created a “digital box” where <strong>the perspective changes depending on the position of the user</strong>, creating the illusion of looking in a real box.",
+            "photos": [
+                {
+                    "video": "pedete",
+                    "size": "wide"
+                },
+                {
+                    "filename": "pedete-day",
+                    "size": "wide"
+                },
+                {
+                    "filename": "pedete-screen",
+                    "size": ""
+                }
+            ]
+        },
+        {
+            "name": "Get Something Back",
+            "year": "product<br>2013",
+            "definition": "Responding to a brief to design a device for a very particular person, this product is intended to help a person dealing with <strong>self-confidence issues</strong> and phone addiction. We created a physical point where they could access personalised data from social media that is meaningful to their lives. In exchange of giving their phone away, the device starts up and reads aloud positive tweets about issues the user is currently dealing with.",
+            "additional": "Made in collaboration with Luke Augustine and Daniel Kochaniuk",
+            "photos": [
+                {
+                    "filename": "get-something-back-wall",
+                    "size": "wide"
+                },
+                {
+                    "filename": "get-something-back-dial",
+                    "size": ""
+                },
+                {
+                    "filename": "get-something-back-top",
+                    "size": "wide"
+                }
+            ]
+        }
+    ]
+
+//- ,
+//- {
+//-     "name": "Tesco Bank App",
+//-     "year": "third year project<br>2014",
+//-     "definition": "We were asked to design an app to simplify the everyday life of managers at Tesco Bank, by doing user research to identify repetitive, time-consuming tasks during their day and bring concrete, innovative solutions. My final prototype was built with Framer.js and features an email client for rapidly sorting messages as they arrive (reply now, later, archive), a calendar to quickly identify busy and free time slots, and a listing of people managed that links with the email and calendar sections for a rapid overview. I have been selected to present this prototype at Tesco Bank’s headquarters.",
+//-     "photos": [
+//-         {
+//-             "filename": "tesco1"
+//-         },
+//-         {
+//-             "filename": "tesco2"
+//-         },
+//-         {
+//-             "filename": "tesco5"
+//-         },
+//-         {
+//-             "filename": "tesco4"
+//-         }
+//-     ]
+//- }
