@@ -20,7 +20,7 @@ section.work
                         if photo.filename
                             .image(class="#{photo.size} project-#{photo.filename}")
                         else if photo.video
-                            .image(class="#{photo.size}")
+                            .image(class="#{photo.size} project-#{photo.video}")
                                 //- video(autoplay='true', loop='true', muted='true')
                                 video(autoplay, loop, muted)
                                     source(src='/images/#{photo.video}.mp4' type='video/mp4')

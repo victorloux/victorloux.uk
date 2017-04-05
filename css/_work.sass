@@ -116,6 +116,11 @@
             margin-top: -10%
             // width: $column * 2 + $gutter
             +fill-parent
+                
+        &.project-b00t-1 video
+            margin-top: 0
+            width: auto
+
 
         background-color: darken($background, 20%)
 
@@ -155,7 +160,18 @@
 
             // max-width: 460px !important
 
-$all-project-images: ("cuppa-1", png), ("cuppa-2", png), ("get-something-back-dial", jpg), ("get-something-back-phone", jpg), ("get-something-back-top", jpg), ("get-something-back-wall", jpg), ("pedete-day", jpg), ("pedete-screen", png), ("pedete", gif), ("reminiscer-1", jpg), ("reminiscer-2", jpg), ("reminiscer-3", jpg), ("socialdigital-booklet", jpg), ("socialdigital-booklet2", jpg), ("socialdigital-space", jpg), ("static-flyers", jpg), ("static-set", jpg), ("static-vj", jpg), ("tig-1", jpg), ("tig-2", jpg), ("tig-3", png), ("daw-1", jpg), ("daw-2", png), ("daw-3", png), ("dada-1", png), ("dada-2", jpg), ("dada-3", png), ("tapepm-1", png), ("tapepm-2", jpg), ("tapepm-3", png)
+        &.megawide
+            +span-columns(5 of $right-side-width)
+
+            +media($tablet)
+                +span-columns($tablet-right-side-width of $tablet-right-side-width)
+
+            +media($mobile)
+                +span-columns($mobile-right-side-width - 1 of $mobile-right-side-width)
+
+            // max-width: 460px !important
+
+$all-project-images: ("cuppa-1", png), ("cuppa-2", png), ("get-something-back-dial", jpg), ("get-something-back-phone", jpg), ("get-something-back-top", jpg), ("get-something-back-wall", jpg), ("pedete-day", jpg), ("pedete-screen", png), ("pedete", gif), ("reminiscer-1", jpg), ("reminiscer-2", jpg), ("reminiscer-3", jpg), ("socialdigital-booklet", jpg), ("socialdigital-booklet2", jpg), ("socialdigital-space", jpg), ("static-flyers", jpg), ("static-set", jpg), ("static-vj", jpg), ("tig-1", jpg), ("tig-2", jpg), ("tig-3", png), ("daw-1", jpg), ("daw-2", png), ("daw-3", png), ("dada-1", png), ("dada-2", jpg), ("dada-3", png), ("tapepm-1", png), ("tapepm-2", jpg), ("tapepm-3", png), ("b00t-2", png)
 
 @each $filename, $extension in $all-project-images
     .project-#{$filename}
