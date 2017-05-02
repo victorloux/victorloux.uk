@@ -69,3 +69,22 @@ $tint-fade: mix($text, $background, 36%)
 	.details
 		color: mix($background, $aside-colour, 50%)
 		font-size: 0.8em
+		
+=button
+	display: inline-block
+	margin-left: 1em
+	margin-top: 0.6em
+	padding: 0.3em 0.5em
+	background: mix($background, $text-darker, 80%)
+	color: $text-darker
+
+	font-size: 0.8em
+
+	border-radius: 4px
+
+	+sans-serif
+	font-weight: bold
+
+	&:hover
+		background: mix($background, $text-darker, 70%)
+		// text-decoration: none

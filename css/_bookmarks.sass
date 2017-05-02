@@ -1,0 +1,119 @@
+
+#search
+    +span-columns($grid-columns)
+    +row
+    margin-bottom: 1em
+
+header
+    a:link, a:visited
+        color: mix(white, $text-alt, 80%)
+        text-decoration: none
+        transition: color 0.15s linear
+        
+    a:hover
+        color: white
+
+    .separator
+        position: relative
+        top: .1em
+
+h2
+    +right-side-inner-limited    
+
+.bookmarks
+    article
+        aside
+            margin-top: -.25em
+
+        margin-bottom: 2.4em
+
+        h4
+            +right-side-inner-limited
+            line-height: 1.1
+
+        h4 a:link, h4 a:visited
+            text-decoration: none
+            color: black
+
+        h4 a:hover
+            text-decoration: underline
+
+        h5
+            +right-side-only
+            margin: .4em 0
+            font-weight: normal
+
+            a
+                color: mix($background, $aside-colour, 20%)
+                text-decoration: none
+                
+                &:hover, &:hover strong
+                    color: mix($text-darker, black, 50%)
+                
+                strong
+                    color: $text-darker
+
+        .details
+            padding-left: 0.4em
+            border-left: 4px solid $text-darker
+            margin: 0.4em 0
+            font-size: 1.1em
+            color: $text-darker
+            +serif
+
+        .tags
+            list-style-type: none
+            margin: .8em 0 0
+            padding: 0
+            clear: both
+    
+            li
+                display: inline-block
+                margin-left: 0
+                
+                &:first-of-type
+                    font-size: 1em
+                    margin-right: 0.5em
+                    color: mix($background, $aside-colour, 40%)
+                    +real-small-caps
+                
+                a
+                    +button
+                    margin: 0 0.2em 0 0
+                    text-decoration: none
+
+.pagination    
+    padding: 0
+    
+    +right-side-only
+
+    li
+        list-style-type: none
+        display: inline-block
+
+    & a:link, & a:visited
+        +button
+        margin: 0 1em 0 0
+        text-decoration: none
+            
+.extra
+    +right-side-only
+    +row
+        
+    $search-height: 30px
+    $search-corner: 6px
+
+    input[type="text"]
+        border-radius: $search-corner 0 0 $search-corner
+        border: 0
+        margin: 0
+        padding: 3px 0 3px 8px
+        height: $search-height
+
+    input[type="submit"]
+        border-radius: 0 $search-corner $search-corner 0
+        border: 0
+        margin: 0
+        height: $search-height
+        background-color: $text-alt
+        
