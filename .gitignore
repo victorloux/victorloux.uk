@@ -1,5 +1,11 @@
-css/*.css
-css/bourbon/
-css/neat/
-images/
-index.html
+app/assets/css/
+app/assets/img/
+app/assets/js/
+app/*.html
+node_modules/
+
+src/-old-css/bourbon
+src/-old-css/neat
+
+## Sass
+.sass-cache

@@ -12,18 +12,18 @@ section.work
                 if piece.links
                     div.definition
                         each url, name in piece.links
-                            a(href="#{url}") #{name}
+                            a(href=url) #{name}
 
             div.images
                 if piece.photos
                     each photo in piece.photos
                         if photo.filename
-                            .image(class="#{photo.size} project-#{photo.filename}")
+                            .image(class=photo.size + " project-" + photo.filename)
                         else if photo.video
-                            .image(class="#{photo.size} project-#{photo.video}")
+                            .image(class=photo.size + " project-" + photo.video)
                                 //- video(autoplay='true', loop='true', muted='true')
                                 video(autoplay, loop, muted)
-                                    source(src='/images/#{photo.video}.mp4' type='video/mp4')
+                                    source(src='/images/' + photo.video + '.mp4' type='video/mp4')
 
             div.definition
                 p!= piece.definition

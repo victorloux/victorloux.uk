@@ -5,7 +5,7 @@ html(lang='en')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
 
         title Victor Loux &mdash; interaction designer
-        link(rel='stylesheet', href='/css/main.css')
+        link(rel='stylesheet', href='/assets/css/main.css')
         script(src='//use.typekit.net/tik4qco.js')
         script.
             // check for safari and if yes, add a 'safari' class for small caps
@@ -17,13 +17,11 @@ html(lang='en')
             try{Typekit.load();}catch(e){}
     body
         .container
+            include ./pages/intro.pug
+            include ./pages/work.pug
+            include ./pages/cv.pug
 
-            include ./pages/projects.jade
-            include ./pages/intro.jade
-            include ./pages/work.jade
-            include ./pages/cv.jade
-
-        script(src='/js/smoothscroll.js')
+        script(src='/assets/js/smoothscroll.js')
         script.
             smoothScroll.init({
                 speed: 650,
