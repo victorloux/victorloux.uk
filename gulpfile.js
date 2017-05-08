@@ -30,7 +30,7 @@ gulp.task('css', function () {
 gulp.task('html', function () {
     var dataFile = 'src/pages/projects.json';
 
-    return gulp.src('src/index.pug')
+    return gulp.src(['src/index.pug', 'src/404.pug'])
     .pipe(data(function(file){
         return JSON.parse(fs.readFileSync(dataFile));
     }))

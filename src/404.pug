@@ -1,0 +1,28 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+        title Victor Loux &mdash; interaction designer
+        link(rel='stylesheet', href='/assets/css/main.css')
+        script(src='//use.typekit.net/tik4qco.js')
+        script.
+            // check for safari and if yes, add a 'safari' class for small caps
+            if(!!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/)){
+                document.addEventListener("DOMContentLoaded", function () {
+                    document.getElementsByTagName("body")[0].className += "safari"
+                }, false);
+            }
+            try{Typekit.load();}catch(e){}
+    body
+        .container
+            header.row
+                h1.eight.columns.offset-by-two Oops!
+
+            section.row.intro
+                p.title.seven.columns.offset-by-two
+                    | You hit a 404 page. You shouldn't get lost,
+                    | there is only one page here. Try to 
+                    a(href="/") go back home
+                    | !
