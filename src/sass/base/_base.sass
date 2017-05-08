@@ -18,7 +18,7 @@ body
     color: $text-colour
 
     background-color: $background
-    background: linear-gradient(darken($background, 4%) 0, $background 8%) no-repeat
+    background: linear-gradient($background-start 0, $background 8%) no-repeat
 
     font-kerning: normal
     font-variant-ligatures: common-ligatures contextual
@@ -48,8 +48,8 @@ abbr
         text-decoration: none
 
         &:hover
-            color: $text-colour-darker
+            color: $text-dark
 
 // debug grid
 // .container
-    // outline: 1px solid rgba($text-colour-darker, .2)
+    // outline: 1px solid rgba($text-dark, .2)

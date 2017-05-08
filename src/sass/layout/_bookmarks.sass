@@ -4,7 +4,7 @@
 
 header
     a:link, a:visited
-        color: mix(white, $text-colour-alt, 80%)
+        color: mix(white, $text-light, 80%)
         text-decoration: none
         transition: color 0.15s linear
         
@@ -38,21 +38,21 @@ header
             font-weight: normal
 
             a
-                color: mix($background, $aside-colour, 20%)
+                color: mix($background, $text-dark, 20%)
                 text-decoration: none
                 
                 &:hover, &:hover strong
-                    color: mix($text-colour-darker, black, 50%)
+                    color: mix($text-dark, black, 50%)
                 
                 strong
-                    color: $text-colour-darker
+                    color: $text-dark
 
         .details
             padding-left: 0.4em
-            border-left: 4px solid $text-colour-darker
+            border-left: 4px solid $text-dark
             margin: 0.4em 0
             font-size: 1.1em
-            color: $text-colour-darker
+            color: $text-dark
             +serif
 
         .tags
@@ -68,7 +68,7 @@ header
                 &:first-of-type
                     font-size: 1em
                     margin-right: 0.5em
-                    color: mix($background, $aside-colour, 40%)
+                    color: mix($background, $text-dark, 40%)
                     +real-small-caps
                 
                 a
@@ -105,5 +105,5 @@ header
         border: 0
         margin: 0
         height: $search-height
-        background-color: $text-colour-alt
+        background-color: $text-light
         

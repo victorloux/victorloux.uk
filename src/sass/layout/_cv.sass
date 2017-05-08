@@ -21,7 +21,7 @@
 
             border-style: solid
             border-width: 0 0 2px 0
-            border-color: mix($background, $text-colour-alt, 50%)
+            border-color: $separator-colour
 
     section
         margin-bottom: 4.2em
@@ -46,21 +46,21 @@
             font-size: 0.84em
 
         span
-            color: darken($text-colour-darker, 5%)
+            color: $text-dark
             font-size: .8em
             margin-left: 0.5em
 
     p
-        color: $tint-70
+        color: $text-cv-body
 
         &.details
             width: 75%
             font-size: 1.4rem
             line-height: 1.4
-            color: mix($tint-70, $aside-colour, 40%)
+            color: $text-cv-details
 
 .limited-exp, p.limited-exp
-    color: $tint-fade
+    color: $text-faded
 
 p.limited-exp
     +real-small-caps

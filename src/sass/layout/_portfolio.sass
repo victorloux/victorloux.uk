@@ -7,13 +7,13 @@
 
         p
             +serif
-            color: $text-colour-darker
+            color: $text-dark
             font-size: 1.76rem
 
         .additional
             +sans-serif
             +real-small-caps
-            color: mix($background, $aside-colour, 40%)
+            color: $text-portfolio-details
             margin-top: 0.8rem
             font-size: 1.55rem
             line-height: 1.2
@@ -21,7 +21,7 @@
             a
                 &:link,
                 &:visited
-                    color: mix($background, $aside-colour, 25%)
+                    color: $text-portfolio-details-link
 
 .external-links
     margin-top: 1rem
@@ -44,7 +44,7 @@
     margin-bottom: 0.8em
     overflow: hidden
     background-size: cover
-    background-color: darken($background, 20%)
+    background-color: $portfolio-media-colour
 
     video
         object-fit: cover

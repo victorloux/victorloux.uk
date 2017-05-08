@@ -8,27 +8,41 @@ $bp-larger-than-desktophd: "min-width: 1200px" !default
 // Colours
 // http://www.colourlovers.com/palette/57650/She_Sells_Seashells.
 
+
+// Key colours
 $base: #9FC9D6
 $background: lighten($base, 5%)
 
-$text-colour: #000
-$text-colour-alt: darken($base, 15%)
-$text-colour-darker: mix($text-colour-alt, $text-colour, 70%)
-
-$link-colour: mix($text-colour-alt, $text-colour, 50%)
-$link-colour-hover: darken($link-colour, 20%)
-
-$white: #FFF
+$white: #FFFEFA
 $black: #000
 
-$accent: #FFFEFA
-$aside-colour: $text-colour-darker
+$text-colour: #000
+$text-light: darken($base, 15%)
+$text-dark: mix($text-light, $text-colour, 70%)
 
-$tint-50: mix($text-colour, $white, 50%)
-$tint-70: mix($text-colour, $white, 70%)
+$link-colour: mix($text-light, $text-colour, 50%)
+$link-colour-hover: darken($link-colour, 20%)
 
-$tint-fade: mix($text-colour, $background, 36%)
+// Specific colours
 
+$background-start:            darken($background, 4%)
+$text-colour-shadow:          mix($background, darken($white, 70%))
+
+$text-contact-body:           mix($text-light, $text-colour, 70%)
+$text-contact-link:           mix($text-light, $text-colour, 50%)
+
+$button-colour:               mix($background, $text-dark, 80%)
+$button-colour-hover:         mix($background, $text-dark, 70%)
+
+$portfolio-media-colour:      darken($background, 20%)
+$text-aside-details:          mix($background, $text-dark, 50%)
+$text-portfolio-details:      mix($background, $text-dark, 40%)
+$text-portfolio-details-link: mix($background, $text-dark, 25%)
+
+$text-cv-body:                mix($text-colour,  $white, 70%)
+$text-cv-details:             mix($text-cv-body, $text-dark, 40%)
+$separator-colour:            mix($background, $text-light, 50%)
+$text-faded:                  mix($background, $text-colour, 65%)
 
 // Colors -- SKELETON
 $light-grey: #e1e1e1 !default
