@@ -1,0 +1,54 @@
+// Base Styles
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+// NOTE
+// html is set to 62.5% so that all the REM measurements throughout Skeleton
+// are based on 10px sizing. So basically 1.5rem = 15px :)
+
+html
+    font-size: 62.5%
+
+body
+    font-size: 1.5em
+
+    // currently ems cause chrome bug misinterpreting rems on body element
+    line-height: 1.6
+    font-weight: 400
+    font-family: $font-stack-sans-serif
+    color: $text-colour
+
+    background-color: $background
+    background: linear-gradient(darken($background, 4%) 0, $background 8%)
+
+    font-kerning: normal
+    font-variant-ligatures: common-ligatures contextual
+    font-feature-settings: "kern", "liga", "clig", "calt"
+
+// Links
+
+a
+    color: $link-colour
+
+    &:hover
+        color: $link-colour-hover
+
+// Misc
+
+hr
+    margin-top: 3rem
+    margin-bottom: 3.5rem
+    border-width: 0
+    border-top: 1px solid $light-grey
+
+abbr
+    &[title]
+        transition: color 0.4s
+        cursor: help
+        border-bottom: 0
+        text-decoration: none
+
+        &:hover
+            color: $text-colour-darker
+
+// debug grid
+// .container
+    // outline: 1px solid rgba($text-colour-darker, .2)

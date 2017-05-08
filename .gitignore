@@ -1,11 +1,9 @@
-app/assets/css/
-app/assets/img/
-app/assets/js/
+app/assets/css/*.css
+app/assets/img/*.*
+app/assets/js/*.js
 app/*.html
 node_modules/
 
-src/-old-css/bourbon
-src/-old-css/neat
-
 ## Sass
 .sass-cache
+.scss-lint.yml

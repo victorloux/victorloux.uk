@@ -1,12 +1,10 @@
 
 #search
-    +span-columns($grid-columns)
-    +row
     margin-bottom: 1em
 
 header
     a:link, a:visited
-        color: mix(white, $text-alt, 80%)
+        color: mix(white, $text-colour-alt, 80%)
         text-decoration: none
         transition: color 0.15s linear
         
@@ -17,9 +15,6 @@ header
         position: relative
         top: .1em
 
-h2
-    +right-side-inner-limited    
-
 .bookmarks
     article
         aside
@@ -28,7 +23,7 @@ h2
         margin-bottom: 2.4em
 
         h4
-            +right-side-inner-limited
+            // +right-side-inner-limited
             line-height: 1.1
 
         h4 a:link, h4 a:visited
@@ -39,7 +34,6 @@ h2
             text-decoration: underline
 
         h5
-            +right-side-only
             margin: .4em 0
             font-weight: normal
 
@@ -48,17 +42,17 @@ h2
                 text-decoration: none
                 
                 &:hover, &:hover strong
-                    color: mix($text-darker, black, 50%)
+                    color: mix($text-colour-darker, black, 50%)
                 
                 strong
-                    color: $text-darker
+                    color: $text-colour-darker
 
         .details
             padding-left: 0.4em
-            border-left: 4px solid $text-darker
+            border-left: 4px solid $text-colour-darker
             margin: 0.4em 0
             font-size: 1.1em
-            color: $text-darker
+            color: $text-colour-darker
             +serif
 
         .tags
@@ -78,28 +72,24 @@ h2
                     +real-small-caps
                 
                 a
-                    +button
+                    // +button
                     margin: 0 0.2em 0 0
                     text-decoration: none
 
 .pagination    
     padding: 0
     
-    +right-side-only
 
     li
         list-style-type: none
         display: inline-block
 
     & a:link, & a:visited
-        +button
+        // +button
         margin: 0 1em 0 0
         text-decoration: none
             
 .extra
-    +right-side-only
-    +row
-        
     $search-height: 30px
     $search-corner: 6px
 
@@ -115,5 +105,5 @@ h2
         border: 0
         margin: 0
         height: $search-height
-        background-color: $text-alt
+        background-color: $text-colour-alt
         

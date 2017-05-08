@@ -67,8 +67,8 @@ gulp.task('bs-reload', function () {
 });
 
 gulp.task('default', ['css', 'js', 'browser-sync'], function () {
-    gulp.watch("src/scss/**/*.scss", ['css']);
+    gulp.watch("src/sass/**/*.sass", ['css']);
     gulp.watch("src/js/*.js", ['js']);
-    gulp.watch("app/**/*.pug", ['html']);
-    gulp.watch("app/pages/projects.json", ['html']);
+    gulp.watch("src/**/*.pug", ['html']);
+    gulp.watch("src/pages/projects.json", ['html']);
 });

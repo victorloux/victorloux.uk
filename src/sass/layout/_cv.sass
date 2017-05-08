@@ -1,0 +1,67 @@
+.cv
+    section > header
+        margin-bottom: 1.8rem
+
+        h3
+            +sans-serif-black
+            +real-small-caps
+            height: 1.1em
+            margin: 0
+
+            font-size: 1.1em
+            line-height: 1.1
+
+            @media (#{$bp-larger-than-phablet})
+                text-align: right
+                margin: 0 inherit
+
+        .line
+            height: 0.75em
+            margin: 0 inherit
+
+            border-style: solid
+            border-width: 0 0 2px 0
+            border-color: mix($background, $text-colour-alt, 50%)
+
+    section
+        margin-bottom: 4.2em
+
+    article
+        margin: 0 0 2.4rem
+
+    h4,
+    .emphasis
+        +real-small-caps(1.75rem)
+        margin: 0
+        font-size: 1.75rem
+        line-height: 2.4rem
+        color: $text-colour
+
+    .emphasis
+        display: inline-block
+
+    h4
+        em
+            font-style: normal
+            font-size: 0.84em
+
+        span
+            color: darken($text-colour-darker, 5%)
+            font-size: .8em
+            margin-left: 0.5em
+
+    p
+        color: $tint-70
+
+        &.details
+            width: 75%
+            font-size: 1.4rem
+            line-height: 1.4
+            color: mix($tint-70, $aside-colour, 40%)
+
+.limited-exp, p.limited-exp
+    color: $tint-fade
+
+p.limited-exp
+    +real-small-caps
+    margin-top: 0.3em

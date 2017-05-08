@@ -1,0 +1,65 @@
+// Breakpoints
+$bp-larger-than-mobile: "min-width: 400px" !default
+$bp-larger-than-phablet: "min-width: 550px" !default
+$bp-larger-than-tablet: "min-width: 750px" !default
+$bp-larger-than-desktop: "min-width: 1000px" !default
+$bp-larger-than-desktophd: "min-width: 1200px" !default
+
+// Colours
+// http://www.colourlovers.com/palette/57650/She_Sells_Seashells.
+
+$base: #9FC9D6
+$background: lighten($base, 5%)
+
+$text-colour: #000
+$text-colour-alt: darken($base, 15%)
+$text-colour-darker: mix($text-colour-alt, $text-colour, 70%)
+
+$link-colour: mix($text-colour-alt, $text-colour, 50%)
+$link-colour-hover: darken($link-colour, 20%)
+
+$white: #FFF
+$black: #000
+
+$accent: #FFFEFA
+$aside-colour: $text-colour-darker
+
+$tint-50: mix($text-colour, $white, 50%)
+$tint-70: mix($text-colour, $white, 70%)
+
+$tint-fade: mix($text-colour, $background, 36%)
+
+
+// Colors -- SKELETON
+$light-grey: #e1e1e1 !default
+$dark-grey: #333 !default
+$primary-color: #33c3f0 !default
+$secondary-color: lighten($dark-grey, 13.5%) !default
+$border-color: #bbb !default
+$link-color: #1eaedb !default
+$font-color: #222 !default
+// END skeleton
+
+
+// Fonts
+
+$font-stack-sans-serif: "soleil", "Verdana", "Gill Sans", "Lucida Grande", "Arial", "Helvetica", sans-serif
+$font-stack-serif: "alegreya", "Palatino", "Georgia", "Times New Roman", "Hoefler Text", "Baskerville", serif
+$font-stack-mono: Menlo, Courier New, Courier, Mono, monospace
+
+
+//Grid Variables
+$container-width: 1200px !default
+$container-width-larger-than-mobile: 85% !default
+$container-width-larger-than-phablet: 80% !default
+$total-columns: 10 !default
+$column-width: 100 / $total-columns !default
+
+// calculates individual column width based off of # of columns
+$column-margin: 2% !default
+
+// space between columns
+
+// Misc
+$portfolio-image-height: 260px
+$global-radius: 4px !default

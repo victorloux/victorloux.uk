@@ -1,0 +1,93 @@
+.work
+    article
+        margin-bottom: 10rem
+
+        &:last-of-type
+            margin-bottom: 2rem
+
+        p
+            +serif
+            color: $text-colour-darker
+            font-size: 1.76rem
+
+        .additional
+            +sans-serif
+            +real-small-caps
+            color: mix($background, $aside-colour, 40%)
+            margin-top: 0.8rem
+            font-size: 1.55rem
+            line-height: 1.2
+
+            a
+                &:link,
+                &:visited
+                    color: mix($background, $aside-colour, 25%)
+
+.external-links
+    margin-top: 1rem
+
+    a
+        &:link,
+        &:visited
+            +button
+
+        &::after
+            text-decoration: none
+            display: inline-block
+            margin-left: 0.3em
+            margin-top: 0.1em
+            content: "\002192"
+
+.portfolio-media
+    height: $portfolio-image-height
+    margin-top: .4em // align with aside text
+    margin-bottom: 0.8em
+    overflow: hidden
+    background-size: cover
+    background-color: darken($background, 20%)
+
+    video
+        object-fit: cover
+        margin-top: -5%
+        width: 100%
+        box-sizing: border-box
+
+
+    //- Projects-specific alignment
+
+    &.project-socialdigital-space,
+    &.project-tapepm-2
+        background-position: 50% 0
+
+    &.project-reminiscer-3
+        background-position: 0 30%
+
+        @media (#{$bp-larger-than-phablet})
+            background-position: 0 0
+
+    &.project-b00t-1
+        video
+            margin-top: 0
+            width: auto
+
+
+// Array containing all the images in the project folder, that were converted to multiple resolutions.
+// Keys are the filename, values are extension
+// 
+// @todo: automate this listing?
+// @type {array}
+
+$all-project-images: ("cuppa-1", png), ("cuppa-2", png), ("get-something-back-dial", jpg), ("get-something-back-phone", jpg), ("get-something-back-top", jpg), ("get-something-back-wall", jpg), ("pedete-day", jpg), ("pedete-screen", png), ("pedete", gif), ("reminiscer-1", jpg), ("reminiscer-2", jpg), ("reminiscer-3", jpg), ("socialdigital-booklet", jpg), ("socialdigital-booklet2", jpg), ("socialdigital-space", jpg), ("static-flyers", jpg), ("static-set", jpg), ("static-vj", jpg), ("tig-1", jpg), ("tig-2", jpg), ("tig-3", png), ("daw-1", jpg), ("daw-2", png), ("daw-3", png), ("dada-1", png), ("dada-2", jpg), ("dada-3", png), ("tapepm-1", png), ("tapepm-2", jpg), ("tapepm-3", png), ("b00t-2", png)
+
+@each $filename, $extension in $all-project-images
+    .project-#{$filename}
+        background-image: url('/assets/img/#{$filename}_mobile.#{$extension}')
+
+        +hidpi(1.5)
+            background-image: url('/assets/img/#{$filename}_mobile@2x.#{$extension}')
+
+        @media (#{$bp-larger-than-phablet})
+            background-image: url('/assets/img/#{$filename}_desktop.#{$extension}')
+
+            +hidpi(1.5)
+                background-image: url('/assets/img/#{$filename}_desktop@2x.#{$extension}')
