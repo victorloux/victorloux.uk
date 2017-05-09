@@ -1,0 +1,86 @@
+
+.title
+    +serif
+    margin-top: 0.4em
+    margin-bottom: 0.6em
+    font-size: 2.8rem
+    line-height: 3.5rem
+
+    @media (#{$bp-larger-than-phablet})
+        font-size: 3.3rem
+        line-height: 4.3rem
+
+.interests
+    font-size: 1.8rem
+    color: $text-dark
+    margin-bottom: 2em
+
+    @media (#{$bp-larger-than-phablet})
+        font-size: 2.2rem
+
+
+.contact
+    text-transform: lowercase
+    color: $text-contact-body
+
+    h4
+        margin-bottom: 0
+
+    article
+        margin-bottom: 2rem
+        @media (#{$bp-larger-than-phablet})
+            margin-bottom: .3rem
+
+    p
+        +serif
+        font-size: 2.4rem
+
+        @media (#{$bp-larger-than-phablet})
+            font-size: 3rem
+            line-height: 1.4
+
+    // sliding underline effect
+    // original source: http://bradsknutson.com/blog/css-sliding-underline/ (modified)
+
+    a
+        color: $text-contact-link
+
+        &:hover
+            color: $black
+
+        @media (#{$bp-larger-than-phablet})
+            display: inline-block
+            position: relative
+            padding-bottom: 2px
+            text-decoration: none
+            &::before
+                content: ''
+                display: block
+                position: absolute
+                left: 0
+                bottom: 6px
+                height: 3px
+                width: 100%
+                transition: bottom 0s ease
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                right: 0
+                bottom: 6px
+                height: 3px
+                width: 100%
+                background: $text-contact-link
+                transition: bottom .3s ease
+            &:hover
+                color: $black
+
+                &::before
+                    bottom: 1.7rem
+                    background: $black
+                    transition: bottom .3s ease
+                &::after
+                    // width: 0%
+                    bottom: 1.7rem
+                    background: transparent
+                    transition: bottom 0s ease

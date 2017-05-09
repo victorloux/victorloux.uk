@@ -1,5 +1,9 @@
-css/*.css
-css/bourbon/
-css/neat/
-images/
-index.html
+app/assets/css/*.css
+app/assets/img/*.*
+app/assets/js/*.js
+app/*.html
+node_modules/
+
+## Sass
+.sass-cache
+.scss-lint.yml

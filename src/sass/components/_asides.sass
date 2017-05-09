@@ -1,0 +1,25 @@
+// Mixin for asides
+
+.aside
+    // margin-top: $margin-top
+    +oldstyle-numerals
+    +sans-serif
+    text-transform: lowercase
+    color: $text-dark
+    font-weight: bold
+    font-size: 1.6rem
+
+    @media (#{$bp-larger-than-phablet})
+        font-size: 1.5rem
+        line-height: 2.4rem
+        text-align: right
+
+        @at-root .contact &
+            // Contact links (email, things, &c):
+            // 1.5rem font size + 1.5rem margin = 3rem, so it aligns at the bottom
+            margin-top: 1.5rem
+
+    .details
+        color: $text-aside-details
+        font-size: 1.2rem
+        line-height: 1.4

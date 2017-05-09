@@ -1,13 +1,5 @@
-- var pieces = [];
-
-mixin json()
-  - var oldbuf = buf; buf = [];
-  block
-  - pieces = JSON.parse(buf.join(''));
-  - buf = oldbuf;
-
-+json().
-    [
+{
+    "pieces": [
         {
             "name": "Reminiscer",
             "year": "honours project<br>product<br>2015",
@@ -234,24 +226,4 @@ mixin json()
             ]
         }
     ]
-
-//- ,
-//- {
-//-     "name": "Tesco Bank App",
-//-     "year": "third year project<br>2014",
-//-     "definition": "We were asked to design an app to simplify the everyday life of managers at Tesco Bank, by doing user research to identify repetitive, time-consuming tasks during their day and bring concrete, innovative solutions. My final prototype was built with Framer.js and features an email client for rapidly sorting messages as they arrive (reply now, later, archive), a calendar to quickly identify busy and free time slots, and a listing of people managed that links with the email and calendar sections for a rapid overview. I have been selected to present this prototype at Tesco Bank’s headquarters.",
-//-     "photos": [
-//-         {
-//-             "filename": "tesco1"
-//-         },
-//-         {
-//-             "filename": "tesco2"
-//-         },
-//-         {
-//-             "filename": "tesco5"
-//-         },
-//-         {
-//-             "filename": "tesco4"
-//-         }
-//-     ]
-//- }
+}

@@ -1,0 +1,42 @@
+abbr
+    &[data-title]
+        cursor: help
+        border-bottom: 0
+        text-decoration: none
+        position: relative
+        border-bottom-width: 1px
+        border-bottom-style: solid
+        border-bottom-color: $abbr-border
+        transition: color 0.6s, border-bottom-color 0.6s
+
+        &::after
+            position: absolute
+            left: 0
+            top: 60%
+            visibility: hidden
+            padding: 0.3em 0.6em
+            margin-left: -.3em
+            white-space: pre
+            content: attr(data-title)
+            background: $text-dark
+            border-radius: 2px
+
+            color: $white
+            font-size: 1.3rem
+            font-weight: normal
+            text-transform: none
+            font-variant-caps: initial
+            font-feature-settings: initial
+            opacity: 0
+            transition: top 0.2s ease, opacity 0.3s ease
+            transition-delay: 100ms
+
+        &:hover
+            color: $text-dark
+            border-bottom-color: $text-dark
+
+            &::after
+                z-index: 20
+                top: 120%
+                opacity: 1
+                visibility: visible

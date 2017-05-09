@@ -5,7 +5,7 @@ html(lang='en')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
 
         title Victor Loux &mdash; interaction designer
-        link(rel='stylesheet', href='/css/main.css')
+        link(rel='stylesheet', href='/assets/css/main.css')
         script(src='//use.typekit.net/tik4qco.js')
         script.
             // check for safari and if yes, add a 'safari' class for small caps
@@ -17,16 +17,12 @@ html(lang='en')
             try{Typekit.load();}catch(e){}
     body
         .container
+            header.row
+                h1.eight.columns.offset-by-two Oops!
 
-            include ./pages/projects.jade
-            include ./pages/intro.jade
-            include ./pages/work.jade
-            include ./pages/cv.jade
-
-        script(src='/js/smoothscroll.js')
-        script.
-            smoothScroll.init({
-                speed: 650,
-                easing: 'easeOutQuint', // Easing pattern to use
-                offset: 50, // Integer. How far to offset the scrolling anchor location in pixels
-            });
+            section.row.intro
+                p.title.seven.columns.offset-by-two
+                    | You hit a 404 page. You shouldn't get lost,
+                    | there is only one page here. Try to 
+                    a(href="/") go back home
+                    | !
