@@ -28,3 +28,12 @@ html(lang='en')
                 easing: 'easeOutQuint', // Easing pattern to use
                 offset: 50, // Integer. How far to offset the scrolling anchor location in pixels
             });
+            
+            // CSS tooltips - remove the browser tooltip, replace with data-title
+            document.addEventListener("DOMContentLoaded", function() {
+                var a = document.getElementsByTagName("abbr")
+                for(var i = 0; i < a.length; ++i) {
+                    a[i].setAttribute('data-title', a[i].title);
+                    a[i].removeAttribute('title');
+                }
+            });
