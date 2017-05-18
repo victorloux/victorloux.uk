@@ -17,9 +17,11 @@ html(lang='en')
             try{Typekit.load();}catch(e){}
     body
         .container
-            include ./pages/intro.pug
-            include ./pages/work.pug
-            include ./pages/cv.pug
+            intro
+                include ./pages/intro.pug
+            main
+                include ./pages/work.pug
+                include ./pages/cv.pug
 
         script(src='/assets/js/smoothscroll.js')
         script.
