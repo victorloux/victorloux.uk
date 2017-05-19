@@ -1,30 +1,7 @@
 
-#search
-    margin-bottom: 1em
-
 .bookmarks
-    header
-        a:link, a:visited
-            color: mix(white, $text-light, 80%)
-            text-decoration: none
-            transition: color 0.15s linear
-            
-        a:hover
-            color: white
-
-        .separator
-            position: relative
-            top: .1em
-
     article
-        aside
-            margin-top: -.25em
-
-        margin-bottom: 2.4em
-
-        h4
-            // +right-side-inner-limited
-            line-height: 1.1
+        margin-bottom: 4rem
 
         h4 a:link, h4 a:visited
             text-decoration: none
@@ -33,65 +10,66 @@
         h4 a:hover
             text-decoration: underline
 
-        h5
+        .link
             margin: .4em 0
             font-weight: normal
 
-            a
-                color: mix($background, $text-dark, 20%)
-                text-decoration: none
-                
-                &:hover, &:hover strong
-                    color: mix($text-dark, black, 50%)
-                
-                strong
-                    color: $text-dark
+            color: mix($background, $text-dark, 20%)
+            text-decoration: none
+
+            &:hover,
+            &:hover strong
+                color: $link-colour-dark
+
+            strong
+                color: $text-dark
 
         .details
+            +serif
             padding-left: 0.4em
             border-left: 4px solid $text-dark
             margin: 0.4em 0
-            font-size: 1.1em
+            font-size: 1.7rem
             color: $text-dark
-            +serif
 
         .tags
             list-style-type: none
             margin: .8em 0 0
             padding: 0
             clear: both
-    
+
             li
                 display: inline-block
                 margin-left: 0
-                
+                margin-bottom: 0
+                font-size: 1.7rem
+
                 &:first-of-type
+                    +real-small-caps
                     font-size: 1em
                     margin-right: 0.5em
-                    color: mix($background, $text-dark, 40%)
-                    +real-small-caps
-                
-                a
-                    // +button
-                    margin: 0 0.2em 0 0
-                    text-decoration: none
+                    color: $text-dark
 
-.pagination    
+                a
+                    +button
+
+.pagination
     padding: 0
-    
 
     li
         list-style-type: none
         display: inline-block
+        font-size: 2rem
 
     & a:link, & a:visited
-        // +button
-        margin: 0 1em 0 0
-        text-decoration: none
-            
+        +button
+
 .extra
     $search-height: 30px
     $search-corner: 6px
+
+    .search
+        margin: 1em 0 3em
 
     input[type="text"]
         border-radius: $search-corner 0 0 $search-corner
@@ -99,6 +77,7 @@
         margin: 0
         padding: 3px 0 3px 8px
         height: $search-height
+        width: 40%
 
     input[type="submit"]
         border-radius: 0 $search-corner $search-corner 0
@@ -106,4 +85,8 @@
         margin: 0
         height: $search-height
         background-color: $text-light
-        
+        // Reset Skeleton styles
+        font-size: inherit
+        line-height: inherit
+        letter-spacing: 0
+        text-transform: none
